@@ -2,8 +2,8 @@ There are the learning material with these video
 [video](https://www.youtube.com/watch?v=2ZLl8GAk1X4&t=71453s)
 
 Time slot:
+[Introduction about Data Structure and Algorithm]
 00:00:00 Introduction
-00:03:46 Introduction to Data Structures 
 00:03:46 Introduction to Data Structures
 00:08:49 Introduction to Algorithms
 00:19:43 Time Complexity of an Algorithm
@@ -11,6 +11,8 @@ Time slot:
 00:27:14 Asymptotic Analysis of an Algorithm
 00:29:43 Asymptotic Notations
 00:39:06 Analysis and Rules to calculate Big O notation
+
+[Data Structure - Arrays]
 01:06:16 One-Dimensional Array
 01:32:38 print elements of an Array
 01:44:29 Remove Even Integers from an Array
@@ -21,6 +23,8 @@ Time slot:
 03:01:46 resize an Array
 03:19:58 Find the Missing Number in an Array
 03:34:08 check if a given String is a Palindrome
+
+[Data Structure - Singly Linked List]
 03:52:52 Create a Singly Linked List
 04:02:58 Print elements of a Singly Linked List
 04:13:11 Find length of a Singly Linked List
@@ -38,6 +42,8 @@ Time slot:
 08:17:23 remove loop from a Singly Linked List？
 08:37:36 Merge Two Sorted ListsQuestion
 09:21:54 LeetCode #2： Add Two Numbers
+
+[Data Structure - Double Linked List]
 09:41:53 represent a Doubly Linked List
 09:46:06 implement Doubly Linked List
 09:52:27 print elements of a Doubly Linked List
@@ -45,21 +51,34 @@ Time slot:
 10:15:25 Insert node at the end of a Doubly Linked List
 10:25:50 delete first node in a Doubly Linked List
 10:41:08 delete last node in a Doubly Linked List
+
+[Data Structure - Circular Singly Linked List]
 10:55:49 represent a Circular Singly Linked List
 11:03:46 implement a Circular Singly Linked List
 11:11:20 traverse and print a Circular Singly Linked List
 11:22:55 insert node at the start of a Circular Singly Linked List
 11:37:48 insert node at the end of a Circular Singly Linked List
 11:51:52 remove first node from a Circular Singly Linked List
+
+[Data Structure - Stacks]
 12:10:37 Stacks
 13:08:22 Next Greater Element
 13:29:44 Valid Parentheses problem (Balanced Brackets)
+
+[Data Structure - Queue]
 13:46:11 represent a Queue
 13:52:52 implement a Queue
 14:31:59 Generate Binary numbers from 1 to n using a Queue
+
+[Data Structure - Binary Tree]
 14:50:36 Binary Trees
+18:48:45 Binary Search Tree
+
+[Data Structure - Matrix]
 20:27:59 Search in a row and column wise sorted matrix
 20:49:30 Print a given matrix in Spiral form
+
+[Data Structure - Priority Queue/Binary Heap]
 21:23:55 Introduction to Priority Queue and Binary Heap
 21:32:00 represent a Binary Heap
 21:43:41 implement Max Heap
@@ -67,8 +86,12 @@ Time slot:
 22:09:30 insert in a Max Heap
 22:45:34 Top - Down Reheapify (Sink) in Max Heap
 23:02:17 delete max element in a Max Heap
+
+[Algorithm - Search]
 23:25:57 Linear Search
 23:35:47 Binary Search
+
+[Algorithm - Sorting]
 23:51:38 Search Insert Position in a Sorted Array
 24:13:22 Bubble Sort
 24:51:29 Insertion Sort
@@ -78,16 +101,28 @@ Time slot:
 28:33:26 Sort an array of 0’s, 1’s, and 2’s (Dutch National Flag Problem) 
 29:06:31 Quick Sort Algorithm
 30:42:59 Squares of a Sorted Array
-31:07:03 Rearrange Sorted Array in Max⧸Min form
+31:07:03 Rearrange Sorted Array in Max/Min form
+
+[Data Structure - Graohs]
 31:38:01 Graphs
 33:55:55 Number of Islands
+
+[Data Structure - HashTable/HashMap]
 34:43:56 Hashing and Hash Tables
 37:33:21 Contains Duplicate
+
+[Algorithm - Intervals]
 37:45:19 Introduction to Intervals and Overlapping Intervals
 37:53:40 Merge Intervals
 38:15:53 Insert Interval
+
+[Data Structure - Trie]
 38:40:02 Trie Data Structures
+
+[Dynamic Programming]
 39:47:59 Dynamic Programming
+
+[Data Strucutre and Algorithm - LeetCode Example]
 41:26:02 Kadane's Algorithm for Maximum Sum Subarray
 42:12:39 LeetCode: Two Sum
 42:54:26 Is Valid Subsequence problem
