@@ -1,4 +1,5 @@
-public class BinarySearchTree 
+
+public class BinarySearchTree_searchKey 
 {
     TreeNode root;
 
@@ -79,7 +80,7 @@ public class BinarySearchTree
 
     public static void main(String[] args)
     {
-        BinarySearchTree bsf = new BinarySearchTree();
+        BinarySearchTree_searchKey bsf = new BinarySearchTree_searchKey();
         bsf.insert(5);
         bsf.insert(7);
         bsf.insert(9);
@@ -97,4 +98,3 @@ public class BinarySearchTree
 
     }
 }
-

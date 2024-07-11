@@ -1,5 +1,4 @@
-import java.security.NoSuchAlgorithmException;
-import java.util.NoSuchElementException;
+package LinkedList.circularLinkedList;
 
 public class CircularLinkedList
 {
@@ -65,67 +64,13 @@ public class CircularLinkedList
         System.out.println(first.data);
     }
 
-    private void insertBegin(int data)
-    {
-        Node temp = new Node(data);
-        
-        if(last == null)
-        {
-            last = temp;
-        }
-        else
-        {
-            temp.next = last.next;
-        }
-        last.next = temp;
-        length++;
-    }
-
-    private void insertLast(int data)
-    {
-        Node temp = new Node(data);
-
-        if(last == null)
-        {
-            last = temp;
-            last.next = last;
-        }
-        else
-        {
-            temp.next = last.next;
-            last.next = temp;
-            last = temp;
-        }
-        length++;
-    }
-
-    private void removeFirstNode()
-    {
-        if(isEmpty())
-        {
-            throw new NoSuchElementException();
-        }
-
-        Node temp = last.next;
-
-        if(last == last.next)
-        {
-            last = null;
-        }
-        else
-        {
-            last.next = temp.next;
-        }
-        temp.next = null;
-        length--;
-    }
 
     public static void main(String[] args)
     {
         CircularLinkedList cll = new CircularLinkedList();
-        cll.insertLast(0);
-        cll.insertLast(1);
-        cll.insertLast(2);
+        cll.createCircularLinkedList();
+        System.out.println("Length:"+cll.length());
+        System.out.println("isEmpty:"+cll.isEmpty());
         cll.display();
     }
 }

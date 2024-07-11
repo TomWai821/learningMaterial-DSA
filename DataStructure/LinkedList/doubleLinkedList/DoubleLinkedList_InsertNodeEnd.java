@@ -1,6 +1,4 @@
-import java.util.NoSuchElementException;
-
-public class DoubleLinkedList{
+public class DoubleLinkedList_InsertNodeEnd{
     
     private Node head;
     private Node tail;
@@ -58,21 +56,6 @@ public class DoubleLinkedList{
         System.out.println("Length: "+ length);
     }
 
-    private void insertNodeBegin(int data)
-    {
-        Node newNode = new Node(data);
-        if(isEmpty())
-        {
-            tail = newNode;
-        }
-        else
-        {
-            newNode.previous = newNode;
-        }
-        newNode.next = head;
-        head = newNode; 
-    }
-
     private void insertNodeEnd(int data)
     {
         Node newNode = new Node(data);
@@ -89,76 +72,15 @@ public class DoubleLinkedList{
         length++;
     }
 
-    private Node deleteFirstNode()
-    {
-        if(isEmpty())
-        {
-            throw new NoSuchElementException();
-        }
-
-        Node temp = head;
-        if(head == tail)
-        {
-            tail = null;
-        }
-        else
-        {
-            head.next.previous = null;
-        }
-
-        head = head.next;
-        temp.next = null;
-        return temp;
-    }
-
-    private Node deleteLastNode()
-    {
-        if(isEmpty())
-        {
-            throw new NoSuchElementException();
-        }
-
-        Node temp = tail;
-        if(head == tail)
-        {
-            head = null;
-        }
-        else
-        {
-            tail.previous.next = null;
-        }
-
-        tail = tail.previous;
-        temp.previous = null;
-        return temp;
-    }
-
     public static void main(String[] args)
     {
         
-        DoubleLinkedList dll = new DoubleLinkedList();
+        DoubleLinkedList_InsertNodeEnd dll = new DoubleLinkedList_InsertNodeEnd();
         dll.insertNodeEnd(0);
         dll.insertNodeEnd(1);
         dll.insertNodeEnd(2);
         dll.insertNodeEnd(3);
-        dll.deleteLastNode();
         dll.printForward();
-
-        /*
-            Node first = new Node(1);
-            Node second = new Node(2);
-            Node third = new Node(3);
-
-            dll.head = first;
-            first.next = second;
-
-            second.previous = first;
-            second.next = third;
-
-            third.previous = second;
-            dll.tail = third;
-
-            dll.printForward();
-        */
+        dll.printBack();
     }
 }
