@@ -2,7 +2,7 @@ There are the learning material with these video
 [video](https://www.youtube.com/watch?v=2ZLl8GAk1X4&t=71453s)
 
 Time slot:
-00:00:00 Introduction 
+00:00:00 Introduction
 00:03:46 Introduction to Data Structures 
 00:03:46 Introduction to Data Structures
 00:08:49 Introduction to Algorithms
