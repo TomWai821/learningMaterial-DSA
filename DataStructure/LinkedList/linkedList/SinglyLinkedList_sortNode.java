@@ -74,7 +74,6 @@ public class SinglyLinkedList_sortNode{
         sll.print();
         sll.sortNode();
         sll.print();
-  
     }
 }
 

@@ -23,20 +23,6 @@ public class SinglyLinkedList_removeNode{
         System.out.println("null");
     }
 
-
-    private int countLength(){
-        ListNode current = head;
-        int count = 0;
-        
-        //count linkedlist length
-        while(current != null){
-            count++;
-            current = current.next;
-        }
-        System.out.println("Length = " + count);
-        return count;
-    }
-
     private void createLinkedList()
     {
         ListNode head = new ListNode(10);
