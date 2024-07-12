@@ -1,5 +1,5 @@
 
-public class SinglyLinkedList{
+public class SinglyLinkedList_searchValue{
     
     private ListNode head;
 
@@ -36,11 +36,9 @@ public class SinglyLinkedList{
         System.out.println("Length = " + count);
         return count;
     }
-    
-    public static void main(String[] args){
 
-        SinglyLinkedList sll = new SinglyLinkedList();
-
+    private void createLinkedList()
+    {
         ListNode head = new ListNode(10);
         ListNode second = new ListNode(0);
         ListNode third = new ListNode(5);
@@ -49,11 +47,31 @@ public class SinglyLinkedList{
         head.next = second;
         second.next = third;
         third.next = fourth;
-
-        sll.head.next = second;
-        second.next = third;
+    }
     
-        sll.countLength();
+    private boolean searchValue(int searchKey)
+    {
+        ListNode current = head;
+
+        while(current != null){
+            if(current.data == searchKey)
+            {
+                System.out.println("Found value in Linked List");
+                return true;
+            }
+            current = current.next;
+        }
+        System.out.println("Cannot found the value");
+        return false;
+    }
+
+    public static void main(String[] args){
+
+        SinglyLinkedList_searchValue sll = new SinglyLinkedList_searchValue();
+        sll.createLinkedList();
+        sll.print();
+
+        sll.searchValue(0);
         sll.print();
     }
 }

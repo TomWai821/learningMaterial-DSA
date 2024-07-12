@@ -1,5 +1,5 @@
 
-public class SinglyLinkedList{
+public class SinglyLinkedList_insertNewEnd{
     
     private ListNode head;
 
@@ -23,24 +23,8 @@ public class SinglyLinkedList{
         System.out.println("null");
     }
 
-
-    private int countLength(){
-        ListNode current = head;
-        int count = 0;
-        
-        //count linkedlist length
-        while(current != null){
-            count++;
-            current = current.next;
-        }
-        System.out.println("Length = " + count);
-        return count;
-    }
-    
-    public static void main(String[] args){
-
-        SinglyLinkedList sll = new SinglyLinkedList();
-
+    private void createLinkedList()
+    {
         ListNode head = new ListNode(10);
         ListNode second = new ListNode(0);
         ListNode third = new ListNode(5);
@@ -49,11 +33,32 @@ public class SinglyLinkedList{
         head.next = second;
         second.next = third;
         third.next = fourth;
+    }
 
-        sll.head.next = second;
-        second.next = third;
+    private void insertNewEnd(int value){
+
+        ListNode newNode = new ListNode(value);
+
+        if(head == null){
+            head = newNode;
+        }
+
+        ListNode current = head;
+        if(current.next != null){
+            current = current.next;
+        }
+        current.next = newNode;
+    }
     
-        sll.countLength();
+    public static void main(String[] args){
+
+        SinglyLinkedList_insertNewEnd sll = new SinglyLinkedList_insertNewEnd();
+        sll.createLinkedList();
+        sll.print();
+        
+        sll.insertNewEnd(0);
+        sll.insertNewEnd(10);
+        sll.insertNewEnd(20);
         sll.print();
     }
 }

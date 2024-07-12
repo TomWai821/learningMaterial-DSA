@@ -1,5 +1,5 @@
 
-public class SinglyLinkedList{
+public class SinglyLinkedList_reverseNode{
     
     private ListNode head;
 
@@ -36,11 +36,9 @@ public class SinglyLinkedList{
         System.out.println("Length = " + count);
         return count;
     }
-    
-    public static void main(String[] args){
 
-        SinglyLinkedList sll = new SinglyLinkedList();
-
+    private void createLinkedList()
+    {
         ListNode head = new ListNode(10);
         ListNode second = new ListNode(0);
         ListNode third = new ListNode(5);
@@ -49,12 +47,36 @@ public class SinglyLinkedList{
         head.next = second;
         second.next = third;
         third.next = fourth;
-
-        sll.head.next = second;
-        second.next = third;
+    }
     
-        sll.countLength();
+    private ListNode reverseNode(ListNode head)
+    {
+        if(head == null){
+            return head;
+        }
+
+        ListNode current = head;
+        ListNode previous = null;
+        ListNode next = null;
+
+        while(current != null)
+        {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
+
+    public static void main(String[] args){
+
+        SinglyLinkedList_reverseNode sll = new SinglyLinkedList_reverseNode();
+        sll.createLinkedList();
         sll.print();
+        sll.reverseNode(sll.head);
+        sll.print();
+
     }
 }
 

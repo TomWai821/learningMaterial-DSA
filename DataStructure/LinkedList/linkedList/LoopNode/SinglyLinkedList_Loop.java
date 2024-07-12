@@ -1,5 +1,5 @@
 
-public class SinglyLinkedList{
+public class SinglyLinkedList_Loop{
     
     private ListNode head;
 
@@ -36,24 +36,29 @@ public class SinglyLinkedList{
         System.out.println("Length = " + count);
         return count;
     }
-    
-    public static void main(String[] args){
 
-        SinglyLinkedList sll = new SinglyLinkedList();
+    private void createLoopNode(){
 
-        ListNode head = new ListNode(10);
-        ListNode second = new ListNode(0);
-        ListNode third = new ListNode(5);
-        ListNode fourth = new ListNode(8);
+        ListNode first = new ListNode(0);
+        ListNode second = new ListNode(5);
+        ListNode third = new ListNode(10);
+        ListNode fourth = new ListNode(15);
+        ListNode fifth = new ListNode(20);
+        ListNode sixth = new ListNode(25);
 
-        head.next = second;
+        head = first;
+        first.next = second;
         second.next = third;
         third.next = fourth;
+        fourth.next = fifth;
+        fifth.next = sixth;
+        sixth.next = third;
+    }
 
-        sll.head.next = second;
-        second.next = third;
-    
-        sll.countLength();
+    public static void main(String[] args)
+    {
+        SinglyLinkedList_Loop sll = new SinglyLinkedList_Loop();
+        sll.createLoopNode();
         sll.print();
     }
 }

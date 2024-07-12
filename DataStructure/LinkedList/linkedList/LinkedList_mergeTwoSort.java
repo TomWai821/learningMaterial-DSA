@@ -1,4 +1,4 @@
-public class LinkedList {
+public class LinkedList_mergeTwoSort {
 
     private ListNode head;
     
@@ -69,52 +69,24 @@ public class LinkedList {
         return dummy.next;
     }
 
-    private static ListNode addTwoNode(ListNode nodeA, ListNode nodeB)
-    {
-        ListNode dummy = new ListNode(0);
-        ListNode tail = dummy;
-        int carry = 0;
-
-        while(nodeA != null || nodeB !=null)
-        {
-            int a = (nodeA != null) ? nodeA.data : 0;
-            int b = (nodeB != null) ? nodeB.data : 0;
-            int sum = carry + a + b;
-
-            carry = sum / 10;
-            tail.next = new ListNode(sum % 10);
-            tail = tail.next;
-
-            if(nodeA != null) {nodeA = nodeA.next;}
-            if(nodeB != null) {nodeB = nodeB.next;}
-        }
-
-        if(carry > 0)
-        {
-            tail.next = new ListNode(carry);
-        }
-
-        return dummy.next;
-    }
-
     public static void main(String[] args)
     {
-        LinkedList linkedList = new LinkedList();
+        LinkedList_mergeTwoSort linkedList = new LinkedList_mergeTwoSort();
         linkedList.insertNewEnd(3);
         linkedList.insertNewEnd(4);
         linkedList.insertNewEnd(3);
         linkedList.print();
 
-        LinkedList linkedList2 = new LinkedList();
+        LinkedList_mergeTwoSort linkedList2 = new LinkedList_mergeTwoSort();
         linkedList2.insertNewEnd(5);
         linkedList2.insertNewEnd(6);
         linkedList2.insertNewEnd(4);
         linkedList2.print();
 
-        LinkedList result = new LinkedList();
-        result.head = addTwoNode(linkedList.head, linkedList2.head);
+        LinkedList_mergeTwoSort result = new LinkedList_mergeTwoSort();
+        result.head = mergeTwoSort(linkedList.head, linkedList2.head);
         result.print();
-        //result.head = mergeTwoSort(linkedList.head, linkedList2.head);
+
 
     }
 }
